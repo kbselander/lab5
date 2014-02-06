@@ -3,6 +3,15 @@
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+
+	$('.hci-friend-wrapper').click(function(e) {
+		e.preventDefault();
+		var text = $(this).text()
+		var name = text[0]
+		console.log(name);
+		var anagram = anagrammedName(name);
+		name = anagram;
+	});
 })
 
 /*
